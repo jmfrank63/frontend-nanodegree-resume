@@ -1,77 +1,188 @@
-// $("#main").append(["Johannes Maria Frank"]);
-// var firstName = "Johannes"; 
-// var age = 51;
-// console.log(firstName);
-// var awesomeThoughts = "I am Johannes and I am AWESOME!";
-// // console.log(awesomeThoughts);
-// var funThoughts = awesomeThoughts.replace("AWESOME","FUN");
-// $("#main").append([funThoughts]);
+// Instructor Notes
 
-// var formattedName = HTMLheaderName.replace("%data%", "Johannes Maria Frank");
-// var formattedRole = HTMLheaderRole.replace("%data%", "Front-End Ninja");
+// work contains an array of jobs. Each job object in jobs should contain 
+// an employer, title, location, dates worked and description.
 
-// $("#header").prepend([formattedRole]);
-// $("#header").prepend([formattedName]);
+var work = {
+    "job1" : {
+        "employer" : "employer1",
+        "title" : "title1",
+        "location" : "location1",
+        "date_start" : "date1.start",
+        "date_end" : "date1.end",
+        "description" : "description1"
+    },
+    "job2" : {
+        "employer" : "employer2",
+        "title" : "title2",
+        "location" : "location2",
+        "date_start" : "date2.start",
+        "date_end" : "date2.end",
+        "description" : "description2"
+    },
+    "job3" : {
+        "employer" : "employer3",
+        "title" : "title3",
+        "location" : "location3",
+        "date_start" : "date3.start",
+        "date_end" : "date3.end",
+        "description" : "description3"
+    },
+    "job4" : {
+        "employer" : "employer4",
+        "title" : "title4",
+        "location" : "location4",
+        "date_start" : "date4.start",
+        "date_end" : "date4.end",
+        "description" : "description4"
+    }
+};
 
-// var skills = ["awesomeness", "programming", "teaching", "JS"];
+// projects contains an array of projects. Each project object in projects
+// should contain a title, dates worked, description, and an images array
+// with URL strings for project images.
 
-// $("#main").append(skills);
-// $("#main").append(skills[0])
+var projects = {
+    "project1" : {
+        "title" : "title1",
+        "date_start" : "date1.start",
+        "date_end" : "date1.end",
+        "description" : "description1",
+        "projects" : [
+            "http://lorempixel.com/200/200/technics/1",
+            "http://lorempixel.com/200/200/technics/2",
+            "http://lorempixel.com/200/200/technics/3",
+            "http://lorempixel.com/200/200/technics/4"
+            ]
+    },
+    "project2" : {
+        "title" : "title2",
+        "date_start" : "date2.start",
+        "date_end" : "date2.end",
+        "description" : "description2",
+        "projects" : [
+            "http://lorempixel.com/200/200/technics/1",
+            "http://lorempixel.com/200/200/technics/2",
+            "http://lorempixel.com/200/200/technics/3",
+            "http://lorempixel.com/200/200/technics/4"
+            ]
+    },
+    "project3" : {
+        "title" : "title3",
+        "date_start" : "date3.start",
+        "date_end" : "date3.end",
+        "description" : "description1",
+        "projects" : [
+            "http://lorempixel.com/200/200/technics/1",
+            "http://lorempixel.com/200/200/technics/2",
+            "http://lorempixel.com/200/200/technics/3",
+            "http://lorempixel.com/200/200/technics/4"
+            ]
+    },
+    "project4" : {
+        "title" : "title4",
+        "date_start" : "date4.start",
+        "date_end" : "date4.end",
+        "description" : "description1",
+        "projects" : [
+            "http://lorempixel.com/200/200/technics/1",
+            "http://lorempixel.com/200/200/technics/2",
+            "http://lorempixel.com/200/200/technics/3",
+            "http://lorempixel.com/200/200/technics/4"
+            ]
+    }
+};
 
-// $("#main").append([skills.length]);
+// bio contains a name, role, welcomeMessage, contacts object and skills array.
+// The contacts object should contain (but doesn't have to) a mobile number,
+// email address, github username, twitter handle and location.
 
-// var bio = {
-//     "name" : "Johannes",
-//     "role" : "Frontend-End Ninja",
-//     "contact" : { "address": "Koenigsberger Str. 19b",
-//                   "postalCode" : "76139",
-//                   "city" : "Karlsruhe",
-//                   "country" : "Germany",
-//                   "email" : "jmfrank63",
-//                   "github" : "https://github.com/jmfrank63"
-//                 },
-//     "pictureURL" : "<img src='images/JMF.jpg' alt='Picture of Johannes'>",
-//     "age" : 51,
-//     "welcomeMessage" : "Welcome to my personal bio page.",
-//     "skills" : skills
-// };
+var bio = {
+    "name" : "name1",
+    "role" : "role1",
+    "welcomeMessage" : "welcomeMessage1",
+    "contacts" : {
+        "mobile_phone" : "mobile_phone1",
+        "email_address" : "email_address1",
+        "github_username" : "github_username1",
+        "twitter_handle" : "twitter_handle1",
+        "location" : "location1"
+    },
+    "skills" : ["awesomeness1", "programming1", "javascript1", "html1"]
+};
 
-// with (bio) {
-//     $("#main").append(name, role, contact.city, contact.address, age, welcomeMessage, skills, [pictureURL]);
-// }
+// education contains an array of schools. Each school object in schools 
+// contains a name, location, degree, majors array, dates attended and a 
+// url for the school's website. education also contains an onlineCourses array.
+// Each onlineCourse object in onlineCourses should contain a title, school,
+// dates attended and a url for the course.
 
-// var work = {};
-// var education = {};
-
-// work.position = "Ninja";
-// work.year = 6;
-// work.city = "Nowhere";
-
-// education["school"] = "Oak Grove High School";
-// education["years"] = 4;
-// education["city"] = "San Jose";
-
-// $("#main").append(work["position"], education.school);
-
-// var education  = {
-//     "schools" : {
-//         "primary" : {
-//             "Grundschule Gaisburg" : "Stuttgart-Gaisburg",
-//             "Johann-Peter Hebel Grundschule" : "Karlsruhe",
-//             "Leopold Grundschule" : "Karlsruhe"
-//         },
-//         "secondary" : {
-//             "Bismark Gymnasium" : "Karlsruhe",
-//             "Gymnasium Laupheim" : "Laupheim",
-//             "Humboldt Gymnasium" : "Ulm"
-//         }
-//     },
-//     "majors" : {
-//         "Abitur" : "Humboldt Gymnasium Ulm",
-//         "Diplom" : "Fachhochschule der Deutschen Bundespost Berlin",
-//         "Nanodegree" : "Udacity",
-//         "Capstone" : "Coursera",
-//         "Linux" : "EdX"
-//     }
-// }
+var education = {
+    "school1" : {
+        "name" : "name1",
+        "location" : "location1",
+        "degree" : "degree1",
+        "majors" : ["major1_1", "major1_2", "major1_3", "major1_4"],
+        "date_start" : "date1.start",
+        "date_end" : "date1.end",
+        "url" : "http://www.school1.org"
+    },
+    "school2" : {
+        "name" : "name2",
+        "location" : "location2",
+        "degree" : "degree2",
+        "majors" : ["major2_1", "major2_2", "major2_3", "major2_4"],
+        "date_start" : "date2.start",
+        "date_end" : "date2.end",
+        "url" : "http://www.school2.org"
+    },
+    "school3" : {
+        "name" : "name3",
+        "location" : "location3",
+        "degree" : "degree3",
+        "majors" : ["major3_1", "major3_2", "major3_3", "major3_4"],
+        "date_start" : "date3.start",
+        "date_end" : "date3.end",
+        "url" : "http://www.school3.org"
+    },
+    "school4" : {
+        "name" : "name4",
+        "location" : "location4",
+        "degree" : "degree4",
+        "majors" : ["major4_1", "major4_2", "major4_3", "major4_4"],
+        "date_start" : "date4.start",
+        "date_end" : "date4.end",
+        "url" : "http://www.school4.org"
+    },
+    "onlineCourses" : {
+        "onlineCourse1" : {
+            "title" : "title1",
+            "school" : "school1",
+            "date_start" : "date1_start",
+            "date_end" : "date1_end",
+            "url" : "http://www.onlineCourse1.org"
+        },
+        "onlineCourse2" : {
+            "title" : "title2",
+            "school" : "school2",
+            "date_start" : "date2_start",
+            "date_end" : "date2_end",
+            "url" : "http://www.onlineCourse2.org"
+        },
+        "onlineCourse3" : {
+            "title" : "title3",
+            "school" : "school3",
+            "date_start" : "date3_start",
+            "date_end" : "date3_end",
+            "url" : "http://www.onlineCourse3.org"
+        },
+        "onlineCourse4" : {
+            "title" : "title4",
+            "school" : "school4",
+            "date_start" : "date4_start",
+            "date_end" : "date4_end",
+            "url" : "http://www.onlineCourse4.org"
+        }
+    }
+};
 
