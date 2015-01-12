@@ -98,14 +98,15 @@ var projects = {
 // email address, github username, twitter handle and location.
 
 var bio = {
-    "name" : "name1",
-    "role" : "role1",
-    "welcomeMessage" : "welcomeMessage1",
+    "name" : "John Doe",
+    "role" : "Front-End Ninja",
+    "bioPic" : "images/fry.jpg",
+    "welcomeMessage" : "You won't hear me coming!",
     "contacts" : {
-        "mobile_phone" : "mobile_phone1",
-        "email_address" : "email_address1",
-        "github_username" : "github_username1",
-        "twitter_handle" : "twitter_handle1",
+        "mobile" : "mobile_phone1",
+        "email" : "email_address1",
+        "github" : "github_username1",
+        "twitter" : "twitter_handle1",
         "location" : "location1"
     },
     "skills" : ["awesomeness1", "programming1", "javascript1", "html1"]
@@ -185,4 +186,24 @@ var education = {
         }
     }
 };
+if (bio['role'] && bio['name']) {
+  $('#header').prepend(HTMLheaderRole.replace('%data%', bio['role']));
+  $('#header').prepend(HTMLheaderName.replace('%data%', bio['name']));
+}
+
+if (bio['bioPic']) {
+  $('#header').append(HTMLbioPic.replace('%data%', bio['bioPic']));
+}
+
+if (bio['welcomeMessage']) {
+  $('#header').append(HTMLWelcomeMsg.replace('%data%', bio['welcomeMessage']));
+}
+
+
+if (bio.skills.length > 0) {
+    $('#header').append(HTMLskillsStart);
+    for (var i = 0; i < bio.skills.length; i++) {
+        $('#skills').append(HTMLskills.replace('%data%',bio.skills[i]));
+    }
+}
 
